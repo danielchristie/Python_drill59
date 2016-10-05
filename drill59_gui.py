@@ -20,7 +20,7 @@ import drill59_func
 def load_gui(self):
 
     self.lbl_title = tk.Label(self.master,text='File Check & Copy Tool')
-    self.lbl_title.grid(row=0,column=0,columnspan=2,padx=(27,0),pady=(10,0),sticky=N+W+E+S)
+    self.lbl_title.grid(row=0,column=0,columnspan=2,padx=(27,0),pady=(10,0))
     self.lbl_strtPath = tk.Label(self.master,text='Start Folder:')
     self.lbl_strtPath.grid(row=1,column=0,padx=(27,0),pady=(10,0),sticky=N+W)
     self.lbl_dstPath = tk.Label(self.master,text='Destination Folder:')
@@ -38,7 +38,7 @@ def load_gui(self):
     self.btn_dstPath = tk.Button(self.master,width=20,height=2,text='Select Destination',command=lambda: drill59_func.getDstPath(self))
     self.btn_dstPath.grid(row=3,column=1,padx=(15,0),pady=(2,10),sticky=W)
     self.btn_strtTool = tk.Button(self.master,width=12,height=2,text='START',command=lambda: drill59_func.copyTool(self))
-    self.btn_strtTool.grid(row=4,column=0,rowspan=2,padx=(15,0),pady=(2,10))
+    self.btn_strtTool.grid(row=4,column=0,columnspan=2,padx=(15,0),pady=(2,10))
 
 if __name__ == "__main__":
     pass

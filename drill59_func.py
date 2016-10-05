@@ -22,16 +22,7 @@ import os
 from tkinter import *
 import tkinter as tk
 from tkinter import filedialog
-#import sqlite3
 
-
-# Be sure to import our other modules 
-# so we can have access to them
-#import drill59_main
-#import drill59_gui
-
-#strtPath = ''
-#dstPath = ''
 
 def center_window(self, w, h): # pass in the tkinter frame (master) reference and the w and h
     # get user's screen width and height
@@ -55,20 +46,14 @@ def ask_quit(self):
 
 
 def getStrtPath(self):
-    #strtPath = raw_input('Enter start path\\folder: ')
-    #self.txt_strtPath.delete(0, END)
-    #self.txt_strtPath.insert(0, "<<start path>>")
     global strtPath
     strtPath =  filedialog.askdirectory(initialdir = "/")
     self.txt_strtPath.delete(0, END)
     self.txt_strtPath.insert(0, strtPath)
     return strtPath
-    
-    
 
-
+    
 def getDstPath(self):
-    #dstPath = raw_input('Enter destination path\\folder: ')
     global dstPath
     dstPath =  filedialog.askdirectory(initialdir = "/")
     self.txt_dstPath.delete(0, END)
